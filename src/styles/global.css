@@ -28,7 +28,7 @@
   --color-error-content: oklch(25% 0.092 26.042);
   --radius-selector: 0rem;
   --radius-field: 0rem;
-  --radius-box: 0.5rem;
+  --radius-box: 0.25rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
   --border: 1px;
@@ -47,5 +47,20 @@
 
 .animate-scroll {
   animation: marquee-ltr 30s linear infinite;
+}
+
+.shape-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  display: block;
+  color: #111827;
+}
+
+.shape-divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
 }
 

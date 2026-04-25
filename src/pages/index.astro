@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection.jsx';
+import Footer from '../components/Footer.astro';
 
 const mandirs = [
   { logo: 'https://picsum.photos/200/80?random=1' },
@@ -11,36 +13,8 @@ const mandirs = [
 ];
 ---
 
-<Layout title="MandirSol - Support Mandirs Digitally">
-  <div class="flex flex-col p-2 max-w-6xl mx-auto justify-around items-center mt-10">
-    <div class="flex-col text-center items-center space-y-6">
-      <p class="bg-[#1e1f250a] hover:border-gray-300 border border-gray-200 font-medium text-sm text-black inline-block px-2 rounded-full">
-        For Devotees Worldwide
-      </p>
-
-      <h1 class="md:text-6xl text-3xl text-center font-bold leading-snug">
-        Support
-        <span class="bg-primary text-white px-4 py-1">Mandir</span> Digitally
-        <br />
-        With
-        <span class="underline decoration-wavy decoration-secondary underline-offset-[20px]">
-          Devotion
-        </span>
-      </h1>
-
-      <p class="text-lg text-gray-600 font-[350] text-center max-w-sm md:max-w-lg mx-auto font-sans leading-tight">
-        Mandir Sewa is a digital platform that helps devotees offer donations with faith, transparency and ease.
-      </p>
-
-      <a href="/dashboard" class="btn btn-primary relative">
-        Try Now
-        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </a>
-      <img class="border-2 border-gray-200 rounded-xl shadow-sm" src="https://picsum.photos/600/400?random=10" alt="Mandir Sewa platform preview" />
-    </div>
-  </div>
+<Layout title="MandirSol - Donations with Verifiable Records & NFT Rewards">
+  <HeroSection client:load />
 
   <section class="py-20 overflow-hidden bg-white">
     <div class="text-center mb-14">
@@ -59,23 +33,25 @@ const mandirs = [
         ))}
       </div>
     </div>
-  </section>
+   </section>
 
-  <section class="bg-neutral-100 py-24 px-6">
+
+
+   <section class="bg-neutral-100 py-24 px-6">
     <div class="max-w-6xl mx-auto text-center">
       <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
         Designed for
         <span class="bg-primary text-white px-4 py-1">Mandirs</span>
         <br />
         not for
-        <span class="underline decoration-wavy decoration-secondary underline-offset-[20px]">
+        <span class="underline decoration-wavy decoration-secondary underline-offset-20">
           middlemen
         </span>.
       </h1>
 
       <div class="mt-20 grid md:grid-cols-2 gap-12 text-left">
         <div class="flex items-start gap-5">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-gray-800 flex items-center justify-center">
+          <div class="shrink-0 w-10 h-10 rounded-full border-2 border-gray-800 flex items-center justify-center">
             <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
             </svg>
@@ -87,7 +63,7 @@ const mandirs = [
         </div>
 
         <div class="flex items-start gap-5">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-gray-800 flex items-center justify-center">
+          <div class="shrink-0 w-10 h-10 rounded-full border-2 border-gray-800 flex items-center justify-center">
             <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
             </svg>
@@ -100,7 +76,7 @@ const mandirs = [
         </div>
 
         <div class="flex items-start gap-5">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-gray-800 flex items-center justify-center">
+          <div class="shrink-0 w-10 h-10 rounded-full border-2 border-gray-800 flex items-center justify-center">
             <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
             </svg>
@@ -113,7 +89,7 @@ const mandirs = [
         </div>
 
         <div class="flex items-start gap-5">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-gray-800 flex items-center justify-center">
+          <div class="shrink-0 w-10 h-10 rounded-full border-2 border-gray-800 flex items-center justify-center">
             <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
             </svg>
@@ -127,4 +103,69 @@ const mandirs = [
       </div>
     </div>
   </section>
+
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
+        How It Works
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+            1
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Choose a Mandir</h3>
+          <p class="text-gray-600">
+            Browse verified mandirs and select a campaign or cause you want to support with your donation.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+            2
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Donate & Record</h3>
+          <p class="text-gray-600">
+            Pay via <span class="font-semibold text-gray-900">eSewa</span> or <span class="font-semibold text-gray-900">stablecoins</span>. Every donation is stored with verifiable on-chain records.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+            3
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Earn NFT Reward</h3>
+          <p class="text-gray-600">
+            Connect your Solana wallet to mint an NFT as a token of gratitude. <span class="font-semibold">Optional — no wallet? No problem.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section class="py-20 px-6 bg-primary text-primary-content">
+     <div class="max-w-4xl mx-auto text-center">
+       <h2 class="text-3xl md:text-5xl font-bold mb-6">
+         Ready to Support Your Mandir?
+       </h2>
+       <p class="text-lg mb-10 opacity-90">
+         Join thousands of devotees making a difference with transparent, verifiable donations.
+       </p>
+       <a href="/donate" class="btn btn-secondary btn-lg text-lg rounded-md">
+         Start Donating Now
+         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+         </svg>
+       </a>
+     </div>
+   </section>
+
+   <div class="w-full bg-primary" style="margin-bottom: -2px;">
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full block" style="height: 80px; display: block; margin: 0; padding: 0;">
+       <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z" fill="#111827" style="display: block;"></path>
+     </svg>
+   </div>
+
+   <Footer />
 </Layout>
