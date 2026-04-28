@@ -35,7 +35,7 @@ const HeroSection = () => {
   return (
     <section className="relative w-full bg-white py-24 overflow-hidden">
       {/* Hero content */}
-      <div className="flex flex-col max-w-6xl mx-auto items-center space-y-8 relative z-20 px-4">
+      <div className="flex flex-col max-w-6xl mx-auto items-center space-y-4 relative z-20 px-4">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ const HeroSection = () => {
           Support Mandirs Digitally
           <br />
           <span className="text-gray-600">With </span>
-          <span className="text-gray-900 font-bold inline-block min-w-[200px] text-left">
+          <span className="text-gray-900 font-bold inline-block min-w-50 text-left">
             {text}
             <span className="animate-pulse text-gray-400">|</span>
           </span>
@@ -77,11 +77,11 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex gap-4 flex-wrap justify-center"
         >
-          <button
-            onClick={() => setShowModal(true)}
-            className="btn btn-outline btn-lg text-lg px-8 rounded-md"
-          >
-            Join Waitlist
+           <button
+              onClick={() => setShowModal(true)}
+              className="btn bg-gray-900 text-white hover:bg-gray-800 btn-lg text-lg px-8 rounded-md border-2 border-gray-900"
+            >
+             Join Waitlist
             <svg
               className="w-5 h-5 ml-2"
               fill="none"
@@ -171,16 +171,16 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-8 w-full max-w-3xl"
+          className="w-full max-w-3xl"
         >
-          <div className="relative rounded-lg overflow-hidden ">
+          <div className="relative overflow-hidden ">
             <img
               className="w-full h-auto"
               src="/hero.png"
               alt="Mandir Sewa platform preview"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-180 from-primary/5 to-transparent"></div>
           </div>
         </motion.div>
       </div>
