@@ -173,14 +173,14 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-8 w-full max-w-3xl"
         >
-          <div className="relative rounded-lg overflow-hidden shadow-2xl border border-gray-200">
+          <div className="relative rounded-lg overflow-hidden ">
             <img
               className="w-full h-auto"
-              src="https://picsum.photos/800/500?random=10"
+              src="/hero.png"
               alt="Mandir Sewa platform preview"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent"></div>
           </div>
         </motion.div>
       </div>
