@@ -77,11 +77,11 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex gap-4 flex-wrap justify-center"
         >
-           <button
-              onClick={() => setShowModal(true)}
-              className="btn bg-gray-900 text-white hover:bg-gray-800 btn-lg text-lg px-8 rounded-md border-2 border-gray-900"
-            >
-             Join Waitlist
+          <button
+            onClick={() => setShowModal(true)}
+            className="btn bg-gray-900 text-white hover:bg-gray-800 btn-lg text-lg px-8 rounded-md border-2 border-gray-900"
+          >
+            Join Waitlist
             <svg
               className="w-5 h-5 ml-2"
               fill="none"
@@ -101,14 +101,16 @@ const HeroSection = () => {
         {showModal && (
           <dialog className="modal modal-open">
             <div className="modal-box bg-white text-gray-700">
-
-
-
               <h3 className="font-bold text-lg mb-4 text-gray-900">
                 Join the Waitlist
               </h3>
 
-              <button className="btn btn-ghost rounded-full  absolute top-1 right-1" >
+              <button
+                onClick={() => {
+                  setShowModal(false);
+                }}
+                className="btn btn-ghost rounded-full  absolute top-1 right-1"
+              >
                 x
               </button>
 
